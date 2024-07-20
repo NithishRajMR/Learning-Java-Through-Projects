@@ -3,14 +3,16 @@ import java.util.Scanner;
 
 class DataOfChapter{
     int chapter;
+    String name;
 
     DataOfChapter(int chapter){
         this.chapter = chapter;
     }
+
     void checkChapterSaga() {
         if (chapter >= 1 && chapter <= 61) {
             System.out.println(chapter + " is East Blue saga");
-        } else if (chapter >= 61 && chapter <= 135) {
+        } else if (chapter >= 62 && chapter <= 135) {
             System.out.println(chapter + " is Arabasta saga");
         } else if (chapter >= 135 && chapter <= 206) {
             System.out.println(chapter + " is Sky Island saga");
@@ -38,6 +40,7 @@ class DataOfChapter{
         }
     }
 }
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -46,6 +49,8 @@ public class Main {
         int chapter = scanner.nextInt();
 
         DataOfChapter chapter1 = new DataOfChapter(chapter);
+        //DataOfChapter chapter2 = new DataOfChapter(5);
+
         chapter1.checkChapterSaga();
 
         scanner.close();
